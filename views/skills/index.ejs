@@ -10,8 +10,8 @@
     <ul>
       <% skills.forEach(function(s) { %>
       <li>
-        Skill: <%= s.skill %> | Good?: <% if(s.good === true) { %> <%="Yes"%> <%
-        } else { %> <%="No"%> <%}%>
+        <a href="/skills/<%= s.id %>">Skill: <%= s.skill %></a> | Good?: <%
+        if(s.good === true) { %> <%="Yes"%> <% } else { %> <%="No"%> <%} %>
       </li>
       <% }); %>
     </ul>
