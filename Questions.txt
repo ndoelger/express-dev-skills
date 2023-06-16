@@ -1,0 +1,11 @@
+Server
+Routes
+    what does the "router.get" do to the returned router
+    Cleaning caches?
+Controllers
+    "Index" and "Show", can we technically rename those or is there something intrinsic
+    Just one word in the object, is that shorthand for them being the same?
+    Confused about "skills: Skill.getAll()
+    What about req.params.id do I need to know
+Models
+    Confused about my route from findOne to the controllers

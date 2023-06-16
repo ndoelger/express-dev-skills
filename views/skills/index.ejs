@@ -4,16 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skills</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <h1>Skills</h1>
     <ul>
       <% skills.forEach(function(s) { %>
       <li>
+        <form
+          action="/skills/<%=s.id%>?_method=DELETE"
+          class="delete-form"
+          method="POST">
+          <button type="submit">X</button>
+        </form>
         <a href="/skills/<%= s.id %>">Skill: <%= s.skill %></a> | Good?: <%
-        if(s.good === true) { %> <%="Yes"%> <% } else { %> <%="No"%> <%} %>
+        if(s.good === true) { %> <%="Yes"%> <% } else { %> <%="No"%> <% } %>
       </li>
       <% }); %>
+      <a href="/skills/new">Add a Skill</a>
     </ul>
   </body>
 </html>
